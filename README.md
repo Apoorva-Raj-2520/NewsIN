@@ -27,10 +27,11 @@ pip install -r requirements.txt
 # Usage
 ### Run the Streamlit app:
 streamlit run app.py
-#### On VS Code:
+<br />
+On VS Code: <br />
 python3 -m streamlit run app.py
-
-### Open the Streamlit app in your web browser (by default, Streamlit runs on http://localhost:8501):
+<br />
+Open the Streamlit app in your web browser:
 http://localhost:8501
-
-### Select the desired category (Top News or Search Topic) and follow the prompts to view and summarize news articles.
+<br />
+Select the desired category (Top News or Search Topic) and follow the prompts to view and summarize news articles.
