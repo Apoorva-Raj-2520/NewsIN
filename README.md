@@ -9,12 +9,12 @@ View summarized top news articles fetched from Google RSS feeds.
 Search and summarize news articles based on user-specified keywords.
 
 ## Technologies Used
-Python
-Streamlit
-Requests
-Beautiful Soup (bs4)
-NLTK (Natural Language Toolkit)
-Pillow (PIL) for image display
+Python <br />
+Streamlit <br />
+Requests <br />
+Beautiful Soup (bs4) <br />
+NLTK (Natural Language Toolkit) <br />
+Pillow (PIL) for image display <br />
 
 # Installation
 ### Clone the repository:
@@ -28,10 +28,13 @@ pip install -r requirements.txt
 ### Run the Streamlit app:
 streamlit run app.py
 <br />
-On VS Code: <br />
+
+#### On VS Code: <br />
 python3 -m streamlit run app.py
+<br />
 <br />
 Open the Streamlit app in your web browser:
 http://localhost:8501
+<br />
 <br />
 Select the desired category (Top News or Search Topic) and follow the prompts to view and summarize news articles.
