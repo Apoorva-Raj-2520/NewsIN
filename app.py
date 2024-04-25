@@ -67,6 +67,26 @@ def fetch_article(url):
         return None, None
 #################
 
+# def get_quote(summary_text):
+#     sentences = summary_text.split(".")
+#     summary_out = ""
+#     for k in range(len(sentences)):
+#         words=sentences[k].split(" ")
+#         pronouns =['he', 'He','she', 'She', 'they', 'They']
+#         for i in range(len(words)):
+#             if words[i] == "said" or words[i] == "Said":
+#                 words.pop(i)
+#                 if words[i-1] in pronouns:
+#                     words.pop(i-1)
+#         sen=""
+#         for j in range(len(words)):
+#             sen+=words[j]
+#             sen+=" "
+#         summary_out+=sen
+#         summary_out +=". "
+#     return summary_out
+
+
 def split_words(text):
     """Split a string into array of words
     """
@@ -183,7 +203,8 @@ def summarize_content(content, title, max_sents=5):
         summary_comb += summary[1]
     # return [summary[1] for summary in summaries]
     global summ
-    summ[0] = summary_comb
+    # summ[0] = get_quote(summary_comb)
+    summ[0] =summary_comb
 
     # with custom keywords
     ranks_2 = score(sentences, titleWords, keys_2).most_common(max_sents)
@@ -194,6 +215,7 @@ def summarize_content(content, title, max_sents=5):
     for summary in summaries_2:
         summary_comb += summary[1]
     # return [summary[1] for summary in summaries]
+    # summ[2] = get_quote(summary_comb)
     summ[2] = summary_comb
 
 
@@ -220,7 +242,10 @@ def summarize_content(content, title, max_sents=5):
     summarized_sentences = sorted(sentence_scores, key=sentence_scores.get, reverse=True)[:3]
     summary = ' '.join(summarized_sentences)
     
+    # summ[1] = get_quote(summary)
+
     summ[1] = summary
+
     sum_final=""
     for i in range(len(summ)):
         sum_final+="{} :\n".format(i+1)
